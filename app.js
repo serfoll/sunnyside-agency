@@ -57,22 +57,33 @@ app.use((req, res, next) => {
 const handleRequest = async () => {
   const meta = await client.getSingle('meta');
   const navigation = await client.getSingle('navigation');
+  const footer = await client.getSingle('footer');
+
+  console.log(footer.data.social_media[0]);
 
   return {
     meta,
     navigation,
+    footer,
   };
 };
 
 //paths
 app.get('/', async (req, res) => {
   const defaults = await handleRequest();
-
+  const about = await client.getSingle('about');
   const home = await client.getSingle('home');
+  const projects = await client.getAllByType('project');
+  const services = await client.getSingle('services');
+  const testimonials = await client.getSingle('testimonials');
 
   res.render('pages/home', {
     ...defaults,
+    about,
     home,
+    projects,
+    services,
+    testimonials,
   });
 });
 

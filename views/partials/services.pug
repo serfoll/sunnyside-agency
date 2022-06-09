@@ -1,0 +1,13 @@
+.services(id=services.data.title.toLowerCase())
+  .services__wrapper Testing
+    each item in services.data.service
+      article.service__article
+        figure.service__article__media
+          img.service__article__media__image(
+            srcset=`${item.image.url} 720w , ${item.image.mobile.url} 750w`,
+            sizes='(max-width: 750px) 750px, 720px',
+            src=item.image.url,
+            alt=item.image.alt
+          )
+        h2.service__article__title= item.label
+        p.service__article__description= item.description

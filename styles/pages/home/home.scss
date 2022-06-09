@@ -1,18 +1,21 @@
 .home {
-  @extend %cover;
   @extend %center;
 
-  background-color: $color-contessa;
   color: $color-white;
-
   text-align: center;
-  overflow-y: hidden;
 }
 .home__wrapper {
-  @extend %cover;
+  position: relative;
+}
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.home__title {
+  position: absolute;
+  z-index: z('content');
+}
+
+.home__banner__media {
+  z-index: z('canvas');
+}
+
+.home__banner__media__image {
 }

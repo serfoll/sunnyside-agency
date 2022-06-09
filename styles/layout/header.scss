@@ -1,0 +1,26 @@
+.header {
+}
+.header__navigation {
+  color: $color-black;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: z('navigation');
+  width: 100%;
+}
+
+.header__navigation__link {
+  font-size: 0;
+}
+
+.header__navigation__list {
+}
+
+.header__navigation__list__item {
+}
+
+.header__navigation__list__item__link {
+}
+
+.header__navigation__contact__link {
+}

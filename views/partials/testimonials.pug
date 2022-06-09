@@ -1,0 +1,13 @@
+.testimonials(id=testimonials.data.title)
+  .testimonials__wrapper
+    h2.testimonials__title= testimonials.data.title
+    each testimonial in testimonials.data.testimonial
+      article.testimonial__wrapper
+        figure.testimonial__article__media
+          img.testimonial__article__media__image(
+            src=testimonial.client_image.url,
+            alt=testimonial.client_image.alt
+          )
+        p.testimonial__article__client__testimonial= testimonial.client_testimonial
+        h3.testimonial__article__client__name= testimonial.client_name
+        h4.testimonial__article__client__title= testimonial.client_title

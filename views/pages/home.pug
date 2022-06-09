@@ -6,4 +6,16 @@ block variables
 block content
   .home
     .home__wrapper
-      h1.home__title= 'Hello Prismic & WebPack'
+      h1.home__title= home.data.slogan
+      figure.home__banner__media
+        img.home__banner__media__image(
+          srcset=`${home.data.image.url} 2880w , ${home.data.image.mobile.url} 750w`,
+          sizes='(max-width: 750px) 750px, 2880px',
+          src=home.data.image.url,
+          alt=home.data.image.alt
+        )
+
+  include ../partials/about
+  include ../partials/services
+  include ../partials/testimonials
+  include ../partials/projects

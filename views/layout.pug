@@ -52,7 +52,9 @@ html(lang='en')
     link(rel='stylesheet', href='main.css')
 
   body
-    include ./partials/navigation
+    include ./partials/header
 
     #content.content(data-template=template, role='main')
       block content
+
+    include ./partials/footer
