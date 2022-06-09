@@ -1,0 +1,18 @@
+.home {
+  @extend %cover;
+  @extend %center;
+
+  background-color: $color-contessa;
+  color: $color-white;
+
+  text-align: center;
+  overflow-y: hidden;
+}
+.home__wrapper {
+  @extend %cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

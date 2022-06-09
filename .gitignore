@@ -1,0 +1,22 @@
+###############################################
+
+# Avoid your project being littered with annoying .DS_Store files!
+.DS_Store
+.prettierignore
+.editorconfig
+
+#IGNORE FOLDERS
+node_modules
+dist
+design
+
+#IGNORE FILES
+.env
+*.sketch
+*.fig
+*.xd
+
+sunnyside-agency-landing-page-main
+
+README-template.md
+style-guide.md
