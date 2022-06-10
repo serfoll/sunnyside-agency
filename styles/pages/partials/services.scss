@@ -1,0 +1,46 @@
+.services {
+}
+
+.service__article__wrapper {
+  position: relative;
+
+  &:nth-child(1) {
+    color: $color-plantation;
+  }
+  &:nth-child(2) {
+    color: $color-blumine;
+  }
+}
+
+.service__article__media {
+}
+
+.service__article__media__image {
+}
+
+.service__article {
+  bottom: 0;
+  position: absolute;
+  height: 40rem;
+}
+
+.service__article__title {
+  @extend %title-50;
+
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.service__article__description {
+  @extend %description-30;
+
+  letter-spacing: 0.03rem;
+  line-height: 1.64;
+  margin-top: 5rem;
+  padding: 2rem 6rem;
+  text-align: center;
+}

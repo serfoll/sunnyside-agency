@@ -12,10 +12,16 @@
 @import './base/base';
 
 @import './shared/descriptions';
+@import './shared/titles';
 
 @import './layout/header';
 @import './layout/footer';
 
 @import './pages/404/404';
+
+@import './pages/partials/about';
+@import './pages/partials/projects';
+@import './pages/partials/services';
+@import './pages/partials/testimonials';
 
 @import './pages/home/home';

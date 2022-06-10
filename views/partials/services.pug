@@ -1,13 +1,13 @@
 .services(id=services.data.title.toLowerCase())
-  .services__wrapper Testing
-    each item in services.data.service
-      article.service__article
-        figure.service__article__media
-          img.service__article__media__image(
-            srcset=`${item.image.url} 720w , ${item.image.mobile.url} 750w`,
-            sizes='(max-width: 750px) 750px, 720px',
-            src=item.image.url,
-            alt=item.image.alt
-          )
+  each item in services.data.service
+    article.service__article__wrapper
+      picture.service__article__media
+        source(media='(max-width: 768px)', srcset=item.image.mobile.url)
+        source(media='(min-width: 769px)', srcset=item.image.url)
+        img.service__article__media__image(
+          src=item.image.url,
+          alt=item.image.alt
+        )
+      .service__article
         h2.service__article__title= item.label
         p.service__article__description= item.description

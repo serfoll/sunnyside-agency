@@ -1,26 +1,27 @@
 %description-12 {
   font-size: 1.2rem;
-
-  @include media('<phone') {
-    font-size: 2.4rem;
-  }
 }
 
 %description-14 {
   font-size: 1.4rem;
-
-  @include media('<phone') {
-    font-size: 2.4rem;
-  }
 }
 
 %description-16 {
   font-size: 1.6rem;
-  font-weight: 300;
-  letter-spacing: 0, 03;
-  line-height: 1.5;
+}
 
-  @include media('<phone') {
-    font-size: 2.8rem;
+%description-35 {
+  font-size: 3.5rem;
+}
+
+%description-30 {
+  font-size: 3rem;
+}
+
+%description-36 {
+  font-size: 3.8rem;
+
+  @include media('>phone') {
+    font-size: 1.8rem;
   }
 }

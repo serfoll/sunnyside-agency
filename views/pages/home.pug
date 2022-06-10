@@ -6,11 +6,27 @@ block variables
 block content
   .home
     .home__wrapper
-      h1.home__title= home.data.slogan
-      figure.home__banner__media
+      .home__title__wrapper
+        h1.home__title= home.data.slogan
+        .home__icon__wrapper
+          svg.home__icon__arrow(
+            viewBox='0 0 36 114',
+            xmlns='http://www.w3.org/2000/svg'
+          )
+            g(
+              stroke='currentColor',
+              stroke-width='6',
+              fill='none',
+              fill-rule='evenodd',
+              stroke-linecap='round',
+              stroke-linejoin='round'
+            )
+              path(d='M18 3v100M3 95.484l15 15 15-15')
+
+      picture.home__banner__media
+        source(media='(max-width: 768px)', srcset=home.data.image.mobile.url)
+        source(media='(min-width: 769px)', srcset=home.data.image.url)
         img.home__banner__media__image(
-          srcset=`${home.data.image.url} 2880w , ${home.data.image.mobile.url} 750w`,
-          sizes='(max-width: 750px) 750px, 2880px',
           src=home.data.image.url,
           alt=home.data.image.alt
         )

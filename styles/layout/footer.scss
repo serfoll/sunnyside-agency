@@ -1,18 +1,93 @@
 .footer {
+  background-color: $color-monte-carlo;
+  color: $color-plantation;
+  padding-bottom: 15rem;
 }
 
 .footer__navigation {
+  position: relative;
+  padding: 12rem 8rem 18rem;
 }
 
 .footer__navigation__link {
+  display: block;
   font-size: 0;
+  margin-left: 10.5rem;
+  width: 35.4rem;
+
+  &:active,
+  &:focus {
+    color: $color-white;
+  }
 }
 
 .footer__navigation__list {
+  color: $color-viridian;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 8rem;
 }
 
 .footer__navigation__list__item {
+  font-size: 3.5rem;
+  line-height: 1.5;
+  width: calc(100% / 3);
+
+  &:last-of-type {
+    text-align: right;
+  }
+
+  &:nth-child(2) {
+    padding-left: 1rem;
+  }
 }
 
 .footer__navigation__list__item__link {
+  &:active,
+  &:focus {
+    color: $color-white;
+  }
+}
+
+.social__medias__wrapper {
+  width: 60vw;
+  margin: auto;
+  margin-top: 18rem;
+}
+
+.social__medias__list {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social__medias__list__item {
+}
+
+.social__medias__item__link {
+  color: $color-casal;
+  display: block;
+  height: 4rem;
+  width: 4rem;
+
+  &:active,
+  &:focus {
+    color: $color-white;
+  }
+}
+
+.social__medias__item__link__icon {
+}
+
+.attribution {
+  color: $color-casal;
+  font-size: 2.5rem;
+  text-align: center;
+  a {
+    color: $color-viridian;
+    &:active,
+    &:focus {
+      color: $color-white;
+    }
+  }
 }

@@ -1,15 +1,18 @@
 .about(id=`${about.data.title.toLowerCase()}`)
   .about__wrapper
     each item in about.data.section
-      article.about__article
-        figure.about__article__media
+      article.about__article__wrapper
+        picture.about__article__media
+          source(media='(max-width: 768px)', srcset=item.image.mobile.url)
+          source(media='(min-width: 769px)', srcset=item.image.url)
           img.about__article__media__image(
             src=item.image.url,
             alt=item.image.alt
           )
-        h2.about__article__title= item.label
-        p.about__article__description= item.description
-        a.about__article__link(
-          class=`${item.link_color ==='Yellow' ? 'about__article__link__yellow' : 'about__article__link__red'}`,
-          href='/'
-        )= item.link_label
+        .about__article
+          h2.about__article__title= item.label
+          p.about__article__description= item.description
+          a.about__article__link(
+            class=`${item.link_color ==='Yellow' ? 'about__article__link__yellow' : 'about__article__link__red'}`,
+            href=''
+          )= item.link_label

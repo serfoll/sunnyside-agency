@@ -1,26 +1,112 @@
 .header {
-}
-.header__navigation {
-  color: $color-black;
-  left: 0;
-  position: absolute;
-  top: 0;
+  position: relative;
   z-index: z('navigation');
-  width: 100%;
+}
+
+.header__navigation__wrapper {
+  color: $color-white;
 }
 
 .header__navigation__link {
+  display: block;
   font-size: 0;
+  left: 4.6rem;
+  position: absolute;
+  top: 6.3rem;
+  width: 25.4rem;
+}
+
+.header__navigation__toggle {
+  color: rgba($color-white, 0.65);
+  display: block;
+  height: 1.8rem;
+  font-size: 0;
+  position: absolute;
+  right: 4.8rem;
+  top: 7rem;
+  width: 5rem;
+}
+
+.header__navigation__toggle__checkbox {
+  display: none;
+
+  &:checked {
+    + .header__navigation {
+      display: block;
+    }
+  }
+}
+
+.header__navigation {
+  background-color: $color-white;
+  display: none;
+  height: 61rem;
+  left: 50%;
+  position: absolute;
+  top: 21rem;
+  transform: translateX(-50%);
+
+  &::before {
+    border-bottom: 6rem solid transparent;
+    border-right: 6rem solid $color-white;
+    border-top: 6rem solid transparent;
+    content: '';
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: -5.7rem;
+    width: 0;
+  }
 }
 
 .header__navigation__list {
+  width: 88vw;
 }
 
 .header__navigation__list__item {
+  width: 100%;
+  height: 11rem;
+
+  &:first-of-type {
+    margin-top: 5rem;
+  }
 }
 
 .header__navigation__list__item__link {
+  align-items: center;
+  color: $color-gray-chateau;
+  display: flex;
+  font-size: 4rem;
+  height: 100%;
+  justify-content: center;
+  padding-top: 1.2rem;
+  text-align: center;
+  width: 100%;
+
+  &:active {
+    color: $color-bittersweet;
+  }
 }
 
 .header__navigation__contact__link {
+  align-items: center;
+  background-color: $color-gold;
+  border-radius: 11rem;
+  color: $color-ebony-clay;
+  display: flex;
+  font-family: $font-fraunces;
+  font-size: 3rem;
+  font-weight: 900;
+  height: 11rem;
+  justify-content: center;
+  margin: auto;
+  margin-top: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 29rem;
+
+  &:active {
+    background-color: $color-ebony-clay;
+    color: $color-gold;
+  }
 }

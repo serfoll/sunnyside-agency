@@ -1,21 +1,50 @@
 .home {
+  @extend %cover;
   @extend %center;
 
   color: $color-white;
+  height: 107.6rem;
+  position: relative;
   text-align: center;
 }
 .home__wrapper {
   position: relative;
+  height: 100%;
 }
 
-.home__title {
+.home__title__wrapper {
+  left: 50%;
+  letter-spacing: 1.3rem;
+  line-height: 1.2;
+  padding-top: 1.6rem;
   position: absolute;
-  z-index: z('content');
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.home__title {
+  @extend %title-80;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.home__icon__wrapper {
+  height: 32rem;
+  padding-top: 9.7rem;
+}
+
+.home__icon__arrow {
+  width: 7.2rem;
 }
 
 .home__banner__media {
+  height: 100%;
+  width: 100%;
   z-index: z('canvas');
 }
 
 .home__banner__media__image {
+  height: 100%;
+  object-fit: cover;
+  width: auto;
 }

@@ -1,11 +1,14 @@
 #projects.projects
-  .projects__wrapper Projects
+  .projects__wrapper
     .projects__gallery
       each project in projects
-        figure.projects__gallery__media
+        picture.projects__gallery__media
+          source(
+            media='(max-width: 768px)',
+            srcset=project.data.image.mobile.url
+          )
+          source(media='(min-width: 769px)', srcset=project.data.image.url)
           img.projects__gallery__media__image(
-            srcset=`${project.data.image.url} 720w , ${project.data.image.mobile.url} 376w`,
-            sizes='(max-width: 750px) 376px, 720px',
             src=project.data.image.url,
             alt=project.data.image.alt
           )
