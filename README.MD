@@ -34,8 +34,8 @@ Mobile
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution - github](https://github.com/serfoll/sunnyside-agency)
+- Live Site URL: [Sunnyside Agency - heroku](https://sunnyside-ag3ncy.herokuapp.com/)
 
 ## My process
 
