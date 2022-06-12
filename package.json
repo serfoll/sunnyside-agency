@@ -10,6 +10,7 @@
     "backend:dev": "nodemon app.js ",
     "frontend:build": "webpack --progress --config webpack.config.build.cjs",
     "frontend:dev": "webpack-dev-server --progress --config webpack.config.development.cjs",
+    "start:dev": "concurrently --kill-others \"npm run backend:dev\" \"npm run frontend:dev\"",
     "start": "npm run backend:build",
     "heroku-postbuild": "npm run frontend:build"
   },

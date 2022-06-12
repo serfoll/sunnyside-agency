@@ -10,5 +10,5 @@
           source(media='(min-width: 769px)', srcset=project.data.image.url)
           img.projects__gallery__media__image(
             src=project.data.image.url,
-            alt=project.data.image.alt
+            alt=project.data.image.alt ? project.data.image.alt : ''
           )

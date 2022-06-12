@@ -27,8 +27,8 @@ block content
         source(media='(max-width: 768px)', srcset=home.data.image.mobile.url)
         source(media='(min-width: 769px)', srcset=home.data.image.url)
         img.home__banner__media__image(
-          src=home.data.image.url,
-          alt=home.data.image.alt
+          alt=home.data.image.alt ? home.data.image.alt : '',
+          src=home.data.image.url
         )
 
   include ../partials/about

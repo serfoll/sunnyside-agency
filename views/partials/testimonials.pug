@@ -6,7 +6,7 @@
         figure.testimonial__article__media
           img.testimonial__article__media__image(
             src=testimonial.client_image.url,
-            alt=testimonial.client_image.alt
+            alt=testimonial.client_image.alt ? testimonial.client_image.alt : ''
           )
         p.testimonial__article__client__testimonial= testimonial.client_testimonial
         h3.testimonial__article__client__name= testimonial.client_name

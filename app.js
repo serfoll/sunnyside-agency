@@ -29,6 +29,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(express.static(path.join(__dirname, 'public')));
+//favicon
+app.use(
+  '/favicon.ico',
+  express.static(__dirname + '/shared/images/favicon.ico')
+);
+app.use(
+  '/favicon-32x32.png',
+  express.static(__dirname + '/shared/images/favicon-32x32.png')
+);
+app.use(
+  '/favicon-16x16.png',
+  express.static(__dirname + '/shared/images/favicon-16x16.png')
+);
 
 //error handling
 app.use((err, req, res, next) => {
@@ -74,6 +87,8 @@ app.get('/', async (req, res) => {
   const projects = await client.getAllByType('project');
   const services = await client.getSingle('services');
   const testimonials = await client.getSingle('testimonials');
+
+  console.log(home.data.image.alt);
 
   res.render('pages/home', {
     ...defaults,
