@@ -1,7 +1,10 @@
 {
-  "name": "Webpack Prismic Boiler Plate",
+  "name": "Sunnyside-agency",
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "backend:build": "node app.js",
     "backend:dev": "nodemon app.js ",
