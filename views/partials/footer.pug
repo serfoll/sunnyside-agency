@@ -22,7 +22,11 @@
         ul.social__medias__list
           each item in footer.data.social_media
             li.social__medias__list__item
-              a.social__medias__item__link(href=item.link.url, target='_blank')
+              a.social__medias__item__link(
+                href=item.link.url,
+                target='_blank',
+                aria-label=`${item.type} link`
+              )
                 if item.type === 'Facebook'
                   svg.social__medias__item__link__icon(
                     viewBox=' 0 0 20 20',
@@ -61,7 +65,15 @@
                     )
 
     .attribution Challenge by
-      a(href='https://www.frontendmentor.io?ref=challenge', target='_blank')= ' Frontend Mentor '
+      a(
+        href='https://www.frontendmentor.io?ref=challenge',
+        target='_blank',
+        aria-label='Frontend Mentor homepage'
+      )= ' Frontend Mentor '
       | . Coded by
-      a(href='https://github.com/serfoll', target='_blank')= ' Sergio Follyvi '
+      a(
+        href='https://github.com/serfoll',
+        target='_blank',
+        aria-label='SerFoll github page'
+      )= ' Sergio Follyvi '
       | .

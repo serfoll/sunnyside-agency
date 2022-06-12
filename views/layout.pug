@@ -11,7 +11,10 @@ html(lang='en')
 
     //- useful for seo
 
-    meta(name='description', content=meta.data.descprition)
+    meta(
+      name='description',
+      content=meta.data.descprition ? meta.data.descprition : 'Sunnyside Agency'
+    )
 
     //- faveicon for different browsers and devices
 
@@ -33,7 +36,10 @@ html(lang='en')
 
     meta(property='og:type', content='website')
     meta(property='og:title', content=meta.data.title)
-    meta(property='og:descprition', content=meta.data.descprition)
+    meta(
+      property='og:descprition',
+      content=meta.data.descprition ? meta.data.descprition : 'Sunnyside Agency'
+    )
     meta(
       property='og:image',
       content=meta.data.image ? meta.data.image.url : ''
