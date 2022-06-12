@@ -2,21 +2,40 @@
   padding: 13rem 6rem 6rem;
 }
 
-.testimonials__wrapper {
-}
-
 .testimonials__title {
   color: $color-gray-chateau;
   font-family: $font-fraunces;
   font-size: 3.5rem;
+  font-weight: 900;
   letter-spacing: 0.7rem;
   text-align: center;
   text-transform: uppercase;
+
+  @include media('>phone', '>=desktop') {
+    letter-spacing: 0.5rem;
+    font-size: 2rem;
+    padding-top: 3.5rem;
+  }
+}
+
+.testimonials__wrapper {
+  @include media('>phone', '>=desktop') {
+    display: inline-flex;
+    margin-bottom: 2.5rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 5rem;
+  }
 }
 
 .testimonial__wrapper {
   margin: 13rem auto;
   text-align: center;
+
+  @include media('>phone', '>=desktop') {
+    margin: 8.2rem auto;
+  }
 }
 
 .testimonial__article__media {
@@ -26,6 +45,12 @@
   margin-bottom: 7rem;
   overflow: hidden;
   width: 14.5rem;
+
+  @include media('>phone', '>=desktop') {
+    height: 7.5rem;
+    width: 7.5rem;
+    margin-bottom: 5.5rem;
+  }
 }
 
 .testimonial__article__media__image {
@@ -33,10 +58,16 @@
 }
 
 .testimonial__article__client__testimonial {
+  @extend %description-35;
+
   color: $color-shuttle-gray;
-  font-size: 3.5rem;
   line-height: 1.7;
   margin-bottom: 7rem;
+
+  @include media('>phone', '>=desktop') {
+    margin-bottom: 6.5rem;
+    padding: 0 4rem;
+  }
 }
 
 .testimonial__article__client__name {
@@ -45,10 +76,19 @@
   font-weight: 900;
   margin-bottom: 3.5rem;
   padding-top: 1rem;
+
+  @include media('>phone', '>=desktop') {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .testimonial__article__client__title {
   color: $color-gray-chateau;
   font-size: 2.8rem;
   text-transform: capitalize;
+
+  @include media('>phone', '>=desktop') {
+    font-size: 1.5rem;
+  }
 }

@@ -1,14 +1,12 @@
-.projects {
-}
-
-.projects__wrapper {
-}
-
 .projects__gallery {
   display: grid;
   grid-template-areas:
     'p1 p2'
     'p3 p4';
+
+  @include media('>phone', '>=desktop') {
+    grid-template-areas: 'p1 p2 p3 p4';
+  }
 }
 
 .projects__gallery__media {
@@ -18,14 +16,6 @@
 
   &:nth-child(1) {
     grid-area: p3;
-
-    .projects__gallery__media__image {
-      left: 50%;
-      object-fit: cover;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 125%;
-    }
   }
 
   &:nth-child(2) {
@@ -39,10 +29,31 @@
   &:nth-child(4) {
     grid-area: p2;
   }
+
+  @include media('>phone', '>=desktop') {
+    height: 44.7rem;
+  }
 }
 
 .projects__gallery__media__image {
   @extend %cover;
 
   object-fit: cover;
+
+  .projects__gallery__media:nth-child(1) & {
+    left: 50%;
+    object-fit: cover;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 125%;
+
+    @include media('>phone', '>=desktop') {
+      width: 100%;
+    }
+  }
+
+  @include media('>phone', '>=desktop') {
+    height: 100%;
+    width: 100%;
+  }
 }

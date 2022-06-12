@@ -1,23 +1,48 @@
-.about {
-}
-
-.about__wrapper {
-}
-
 .about__article__wrapper {
+  color: $color-ebony-clay;
+
+  @include media('>phone', '>=desktop') {
+    display: grid;
+    grid-template-areas: 'image article';
+    width: 100%;
+
+    &:first-of-type {
+      grid-template-areas: 'article image';
+    }
+  }
 }
 
 .about__article {
-  min-height: 87.5rem;
+  height: 87.5rem;
   padding: 12.5rem 1rem;
   position: relative;
+
+  @include media('>phone', '>=desktop') {
+    grid-area: article;
+    height: 59rem;
+    padding: 16rem 16rem 16rem 11rem;
+    overflow: hidden;
+    width: 50vw;
+
+    .about__article__wrapper:first-of-type & {
+      padding: 16rem 11rem 16rem 16rem;
+    }
+  }
+
+  @include media('>desktop') {
+    width: calc(1440px / 2);
+  }
 }
 
 .about__article__media {
-  width: 100%;
-}
+  @include media('>phone', '>=desktop') {
+    grid-area: image;
+    width: 50vw;
+  }
 
-.about__article__media__image {
+  @include media('>desktop') {
+    width: calc(1440px / 2);
+  }
 }
 
 .about__article__title {
@@ -27,6 +52,14 @@
   letter-spacing: 0.1rem;
   padding: 0px 10rem;
   text-align: center;
+
+  @include media('>phone', '>=desktop') {
+    letter-spacing: 0;
+    line-height: 1.2;
+    padding: 0;
+    padding-left: 0.3rem;
+    text-align: left;
+  }
 }
 
 .about__article__description {
@@ -34,10 +67,18 @@
 
   color: $color-waterloo;
   letter-spacing: 0.039rem;
-  line-height: 1.68;
+  line-height: 1.7;
   margin-top: 5rem;
   padding: 0 4rem;
   text-align: center;
+
+  @include media('>phone', '>=desktop') {
+    letter-spacing: normal;
+    margin-left: 0.4rem;
+    margin-top: 3rem;
+    padding: 0;
+    text-align: left;
+  }
 }
 
 .about__article__link {
@@ -48,6 +89,14 @@
   position: absolute;
   text-transform: uppercase;
   transform: translateX(-50%);
+
+  @include media('>phone', '>=desktop') {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0);
+    margin: 4.5rem 1.5rem;
+  }
 
   &.about__article__link__yellow,
   &.about__article__link__red {
@@ -63,11 +112,26 @@
       width: 110%;
       opacity: 0.3;
       z-index: -1;
+
+      @include media('>phone', '>=desktop') {
+        height: 1rem;
+        left: -0.5rem;
+        position: relative;
+        top: -0.5rem;
+        transform: translate(0);
+        width: 12.5rem;
+      }
     }
 
-    &:hover {
-      &::after {
-        opacity: 1;
+    &:active {
+      opacity: 1;
+    }
+
+    @include media('>phone', '>=desktop') {
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
       }
     }
   }
@@ -80,6 +144,10 @@
   &.about__article__link__red {
     &::after {
       background-color: $color-bittersweet;
+    }
+
+    @include media('>phone', '>=desktop') {
+      margin-left: 1rem;
     }
   }
 }

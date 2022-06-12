@@ -2,6 +2,10 @@
   font-family: $font-fraunces;
   font-size: 3.4rem;
   font-weight: 900;
+
+  @include media('>phone') {
+    font-size: 1.6rem;
+  }
 }
 
 %title-62 {
@@ -10,13 +14,20 @@
   font-weight: 900;
 
   @include media('>phone') {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 
 %title-50 {
   font-family: $font-fraunces;
   font-size: 5rem;
+  font-weight: 900;
+  line-height: 1.15;
+
+  @include media('>phone') {
+    font-size: 2.7rem;
+    line-height: 1.2;
+  }
 }
 
 %title-53 {
@@ -27,6 +38,10 @@
 %title-80 {
   font-family: $font-fraunces;
   font-size: 8rem;
+
+  @include media('>phone') {
+    font-size: 5rem;
+  }
 }
 
 %title-100 {

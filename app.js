@@ -59,8 +59,6 @@ const handleRequest = async () => {
   const navigation = await client.getSingle('navigation');
   const footer = await client.getSingle('footer');
 
-  console.log(footer.data.social_media[0]);
-
   return {
     meta,
     navigation,

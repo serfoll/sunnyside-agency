@@ -1,8 +1,19 @@
 .services {
+  @include media('>phone', '>=desktop') {
+    display: inline-flex;
+  }
 }
 
 .service__article__wrapper {
   position: relative;
+
+  @include media('>phone', '>=desktop') {
+    width: 50vw;
+  }
+
+  @include media('>desktop') {
+    width: calc(1440px / 2);
+  }
 
   &:nth-child(1) {
     color: $color-plantation;
@@ -12,35 +23,45 @@
   }
 }
 
-.service__article__media {
-}
-
-.service__article__media__image {
-}
-
 .service__article {
-  bottom: 0;
+  bottom: 5rem;
   position: absolute;
-  height: 40rem;
+  height: auto;
+
+  @include media('>phone', '>=desktop') {
+    height: auto;
+    padding: 0 16rem;
+    bottom: 2rem;
+    width: 100%;
+  }
 }
 
 .service__article__title {
   @extend %title-50;
 
-  font-size: 5rem;
-  font-weight: 900;
   letter-spacing: 0.3rem;
-  line-height: 1.15;
   text-align: center;
   text-transform: capitalize;
+
+  @include media('>phone', '>=desktop') {
+    letter-spacing: normal;
+    padding-left: 0.2rem;
+  }
 }
 
 .service__article__description {
   @extend %description-30;
 
   letter-spacing: 0.03rem;
-  line-height: 1.64;
+  line-height: 1.5;
   margin-top: 5rem;
   padding: 2rem 6rem;
   text-align: center;
+
+  @include media('>phone', '>=desktop') {
+    padding: 0;
+    padding-top: 0.6rem;
+    margin: 3rem auto 5rem;
+    width: 34rem;
+  }
 }

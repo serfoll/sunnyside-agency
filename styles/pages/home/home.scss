@@ -6,6 +6,10 @@
   height: 107.6rem;
   position: relative;
   text-align: center;
+
+  @include media('>phone') {
+    height: auto;
+  }
 }
 .home__wrapper {
   position: relative;
@@ -21,6 +25,13 @@
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
+
+  @include media('>phone') {
+    padding: 0;
+    top: 20rem;
+    transform: translate(-50%, 0);
+    width: 100%;
+  }
 }
 .home__title {
   @extend %title-80;
@@ -31,10 +42,19 @@
 .home__icon__wrapper {
   height: 32rem;
   padding-top: 9.7rem;
+
+  @include media('>phone') {
+    height: auto;
+    padding-top: 9.7rem;
+  }
 }
 
 .home__icon__arrow {
   width: 7.2rem;
+
+  @include media('>phone') {
+    width: 3.6rem;
+  }
 }
 
 .home__banner__media {
@@ -47,4 +67,9 @@
   height: 100%;
   object-fit: cover;
   width: auto;
+
+  @include media('>phone') {
+    height: auto;
+    width: 100%;
+  }
 }
