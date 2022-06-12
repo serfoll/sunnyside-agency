@@ -11,6 +11,7 @@ const config = require('./webpack.config.cjs');
 module.exports = merge(config, {
   mode: 'production',
   output: {
+    publicPath: '/',
     path: path.join(__dirname, 'public'),
   },
 });
