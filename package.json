@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "engines": {
-    "node": "16.x"
+    "node": "16.15.0"
   },
   "scripts": {
     "backend:build": "node app.js",
@@ -11,7 +11,7 @@
     "frontend:build": "webpack --progress --config webpack.config.build.cjs",
     "frontend:dev": "webpack-dev-server --progress --config webpack.config.development.cjs",
     "start": "concurrently --kill-others \"npm run backend:build\" \"npm run frontend:build\"",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "webpack --progress --config webpack.config.build.cjs"
   },
   "author": "Ser K. Foll",
   "license": "ISC",
